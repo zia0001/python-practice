@@ -1,2 +1,5 @@
+full_patient_name = 'John Smith'
+age = 20
+is_new = True
 
-print("practice mode")
+
