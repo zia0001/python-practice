@@ -1,3 +1,5 @@
+import math
+
 full_patient_name = 'John Smith'
 age = 20
 is_new = True
@@ -48,3 +50,9 @@ x = 10 + 6 * 3 ** 2
 print(x)            #return 64---following Expo>division>multi>add>sub
 y = (5 + 3) * 6 ** 2 / 2
 print(y)            #return 144.o following BEDMAS
+
+
+y = 78.56
+print(round(y))
+print(abs(-988.00))         #gives absolute (+ive) value
+print(math.factorial(5))
