@@ -82,6 +82,12 @@ else:
 print(f"down_payment: ${down_payment}")
 
 
+has_property = input("Do you own property?(yes/no):").lower() == 'yes'
+has_car = input("Do you have a car?(yes/no):").lower() == 'yes'
 
-
-
+if has_car and has_property:
+     print("Has to pay tax annually ")
+elif has_car or has_property:
+    print("Might pay some tax")
+else:
+    print("No tax applied")
