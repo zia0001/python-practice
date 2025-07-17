@@ -24,3 +24,10 @@ print(alert[0:5])
 
 name = 'Jennifer'
 print(name[1:-1])
+
+course = 'learning mathematics'
+print(len(course), course.upper())
+print(course.find('tics'))         # 7
+print(course.replace('atics','atata')) #replaces characters
+
+print('learning' in course) # returns bool value
