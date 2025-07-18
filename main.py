@@ -1,4 +1,4 @@
-# # import math
+import math
 
 
 full_patient_name = 'John Smith'
@@ -144,3 +144,16 @@ while i <=8:
     print("@" * i)
     i += 1
 print("Done")
+
+
+number_to_guess = 8
+for attempt in range(3):
+    user_guessed_number = int(input("guess the secret number: "))
+    if user_guessed_number == number_to_guess:
+        print("You guessed correct number")
+        break
+else:
+    print("Sorry, you failed")
+
+
+
