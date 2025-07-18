@@ -85,9 +85,79 @@ print(f"down_payment: ${down_payment}")
 has_property = input("Do you own property?(yes/no):").lower() == 'yes'
 has_car = input("Do you have a car?(yes/no):").lower() == 'yes'
 
-if has_car and has_property:
+if has_property and has_car:
      print("Has to pay tax annually ")
 elif has_car or has_property:
     print("Might pay some tax")
 else:
     print("No tax applied")
+
+course ='python course'
+print(course.upper())
+
+marks = [12, 13,45,33,33]
+print(len(marks))
+
+def cal_sum(value1, value2):
+    sum_is =value1 +value2
+    print(sum_is)
+    return sum_is
+
+cal_sum(3,9)
+
+
+name = input("Enter your name: ")
+
+if len(name) < 3:
+    print("name must be least 3 characters")
+elif len(name) > 50:
+    print("name can be a maximum of 50 characters")
+else:
+    print("name looks good")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
