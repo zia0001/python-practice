@@ -1,4 +1,4 @@
-# import math
+# # import math
 
 
 full_patient_name = 'John Smith'
@@ -129,3 +129,18 @@ def weight_converter():
         print("Please enter a valid weight.")
 
 weight_converter()
+
+
+i = 8
+
+while i >= 1:
+    print("$" * i)
+    i -= 1
+print("Finished")
+
+i = 1
+
+while i <=8:
+    print("@" * i)
+    i += 1
+print("Done")
