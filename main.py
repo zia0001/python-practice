@@ -155,5 +155,33 @@ for attempt in range(3):
 else:
     print("Sorry, you failed")
 
+car_started = False
+while  True:
+    user_command = input(">").lower()
+    if user_command == 'help':
+       print("""
+start- to start the car
+stop- to stop the car 
+quit- to exit
+        """)
+    elif user_command == 'start':
+        if car_started:
+            print("Car is already started")
+        else:
+            car_started = True
+            print("Car started...Ready to go!")
+    elif user_command == 'stop':
+        if not car_started:
+            print("Car has already stopped")
+        else:
+            car_started = False
+            print("Car has stopped")
+    elif user_command == 'quit':
+        break
+    else:
+        print("Please enter a valid command")
+
+
+
 
 
