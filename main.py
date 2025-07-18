@@ -1,4 +1,4 @@
-import math
+ import math
 
 
 full_patient_name = 'John Smith'
@@ -161,7 +161,7 @@ while  True:
     if user_command == 'help':
        print("""
 start- to start the car
-stop- to stop the car 
+stop- to stop the car
 quit- to exit
         """)
     elif user_command == 'start':
@@ -181,7 +181,16 @@ quit- to exit
     else:
         print("Please enter a valid command")
 
+def prime_number(number):
+    if number <= 1:
+        print(f"{number} is not a prime number")
+    else:
+        for i in range(2, number):
+            if number % i == 0:
+                print(f"{number} is not a prime number")
+                break
+        else:
+            print(f"{number} is a prime number")
 
 
-
-
+prime_number(7)
