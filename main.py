@@ -1,5 +1,6 @@
 # import math
 from doctest import OutputChecker
+from os import remove
 
 import numpy as np
 #
@@ -360,32 +361,91 @@ from os.path import split
 #     print("Cannot be divide by zero")
 
 
-class Animals:
-    def __init__(self, name, species):
-        self.name = name
-        self.species = species
-    def sleep(self):
-        pass
-    def cow(self, name):
-        self.name = name
-        print(f"i ma {name}. i eat grass")
-    def cat(self, name):
-        self.name = name
-        print(f"i am {name}  and i like love cuddling")
+# class Animals:
+#     def __init__(self, name, species):
+#         self.name = name
+#         self.species = species
+#     def sleep(self):
+#         pass
+#     def cow(self, name):
+#         self.name = name
+#         print(f"i ma {name}. i eat grass")
+#     def cat(self, name):
+#         self.name = name
+#         print(f"i am {name}  and i like love cuddling")
+#
+# a1 =Animals('Cowy', 'herbivorous')
+# a2 = Animals('catty', 'pet')
+# print(f"Name is {a1.name} and specie is {a1.species}")
+# print(f"Name is {a2.name} and specie is {a2.species}")
+#
+# print(a1.cow(a1.name))
+#
+#
+# class Birds(Animals):
+#     def parror(self):
+#         print("I am parrot and i can fly")
+# b1 = Birds()
+# b1.sleep()
 
-a1 =Animals('Cowy', 'herbivorous')
-a2 = Animals('catty', 'pet')
-print(f"Name is {a1.name} and specie is {a1.species}")
-print(f"Name is {a2.name} and specie is {a2.species}")
 
-print(a1.cow(a1.name))
+library = ["english", "maths", "operating system", "data structures", "machine learning", "programming fundamentals", "programming in cpp","calculus"]
+lend_books_data ={}
+
+def display_books():
+    print("\nAvailable books")
+    for book in library:
+        print(f" --> {book}")
+def add_book():
+    book = input("Enter book name: ")
+    user = input("Enter your name: ")
+    library.append(book)
+    print(f" {book} is added by {user}")
+def lend_book():
+    global lend_books_data
+    book =input("Enter book name: ")
+    user =input("Enter your name")
+    if book in library:
+        if book not in lend_books_data:
+            lend_books_data[book] = user
+            print(f"Book {book} has been lend to {user}")
+        else:
+            print(f"Sorry the {book} has already lent to {lend_books_data[book]}")
+    else:
+        print(f"{book} is not available in library")
 
 
-class Birds(Animals):
-    def parror(self):
-        print("I am parrot and i can fly")
-b1 = Birds()
-b1.sleep()
+def return_book():
+    book = input("Enter the book name: ")
+    if book in lend_books_data:
+        del lend_books_data[book]
+        print("Thanks for returning the book")
+    else:
+        print(f"{book} book was not lent out")
+
+while True:
+    print("\n LIBRARY BOOKS MENU")
+    print("1. Display books")
+    print("2. Add  book")
+    print("3.Lend  book")
+    print("4.Return book ")
+
+    choice = input("Enter your choice(1-5): ")
+
+    match choice:
+        case '1':
+            display_books()
+        case '2':
+            add_book()
+        case '3':
+            lend_book()
+        case '4':
+            return_book()
+            break
+        case _:
+            print("Invalid option")
+
+
 
 
 
