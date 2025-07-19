@@ -195,9 +195,14 @@
 #
 # prime_number(7)
 
-prices = [78, 98, 345,786]
-total = 0
-for price in prices:
-    total= total +price
-print(total)
+# prices = [78, 98, 345,786]
+# total = 0
+# for price in prices:
+#     total += price
+# print(total)
 
+
+
+for x in range(3):
+    for y in range(2):
+        print(f"{x,y}")
