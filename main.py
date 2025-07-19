@@ -317,18 +317,38 @@ from os.path import split
 #     (keys_in_words.split())
 # print(keys_in_words.split())
 
-phone_number =input('phone: ')
+# phone_number =input('phone: ')
+#
+# keys_in_words_mapping ={
+#     "1": 'One',
+#     "2": 'Two',
+#     "3": 'Three',
+#     "4": 'Four'
+#
+# }
+# output_message = ' '
+# for key in phone_number:
+#     output_message += keys_in_words_mapping.get(key, 'unknown' ) + ' '
+# print(output_message)
 
-keys_in_words_mapping ={
-    "1": 'One',
-    "2": 'Two',
-    "3": 'Three',
-    "4": 'Four'
 
-}
-output_message = ' '
-for key in phone_number:
-    output_message += keys_in_words_mapping.get(key, 'unknown' ) + ' '
-print(output_message)
+
+def emojis_mapping(message):
+    words_in_message = message.split()
+
+    emojis = {
+        ":)": '😀',
+        ":(": '😔'
+    }
+    output = ''
+    for word in words_in_message:
+       output +=  emojis.get(word, word) + ' '
+    print(output)
+
+
+user_message = input("> ")
+emojis_mapping(user_message)
+
+
 
 
