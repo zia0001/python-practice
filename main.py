@@ -237,11 +237,21 @@
 # print(f"{maximum} is the largest number")
 
 
-numbers = [45, 664, 2 ,4, 6,554]
+# numbers = [45, 664, 2 ,4, 6,554]
+#
+# minimum = numbers[0]
+#
+# for number in numbers:
+#     if number < minimum:
+#         minimum = number
+# print(f"{minimum} is the smallest number")
 
-minimum = numbers[0]
 
-for number in numbers:
-    if number < minimum:
-        minimum = number
-print(f"{minimum} is the smallest number")
+matrix = [
+    [7, 9, 4],
+    [9, 9, 4],
+    [4, 2, 9]
+]
+
+print(matrix[0][2])
+
