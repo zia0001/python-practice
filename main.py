@@ -267,28 +267,40 @@ from os.path import split
 #         print(value)
 
 
-marks_list = [43, 44, 53, 77, 32]
-(marks_list.insert(2, 63))       #insert value at give index
-print(marks_list)
-marks_list.remove(44)                   #remove specific value from list
-print(marks_list)
-marks_list.append(90)                   #add value to end of list
-print(marks_list)
-print(marks_list.index(53))             #return index
-marks_list.pop()                        #remove last value
-print(marks_list)
-print(marks_list.count(44))             #checks occurrence of a value
-marks_list.sort()                       #sort in ascending order
-print(marks_list)
-marks_list.reverse()                    #return descending order of values in list
-print(marks_list)
-print(40 in marks_list)          #check existence of value in list
-marks_list2 = marks_list.copy()     #makes independent copy of list
-print(marks_list2)
-marks_list.clear()               #clear entire list
-print(marks_list)
+# marks_list = [43, 44, 53, 77, 32]
+# (marks_list.insert(2, 63))       #insert value at give index
+# print(marks_list)
+# marks_list.remove(44)                   #remove specific value from list
+# print(marks_list)
+# marks_list.append(90)                   #add value to end of list
+# print(marks_list)
+# print(marks_list.index(53))             #return index
+# marks_list.pop()                        #remove last value
+# print(marks_list)
+# print(marks_list.count(44))             #checks occurrence of a value
+# marks_list.sort()                       #sort in ascending order
+# print(marks_list)
+# marks_list.reverse()                    #return descending order of values in list
+# print(marks_list)
+# print(40 in marks_list)          #check existence of value in list
+# marks_list2 = marks_list.copy()     #makes independent copy of list
+# print(marks_list2)
+# marks_list.clear()               #clear entire list
+# print(marks_list)
+#
+#
+# marks_list2.append(909)
+# print(marks_list)
 
 
-marks_list2.append(909)
-print(marks_list)
+
+numbers = [3, 4, 6, 8, 8, 2]
+unique_list = []
+for number in numbers:
+    if number not in unique_list:
+        unique_list.append(number)
+print(unique_list)
+
+
+
 
