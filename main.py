@@ -294,13 +294,17 @@ from os.path import split
 
 
 
-numbers = [3, 4, 6, 8, 8, 2]
-unique_list = []
-for number in numbers:
-    if number not in unique_list:
-        unique_list.append(number)
-print(unique_list)
+# numbers = [3, 4, 6, 8, 8, 2]
+# unique_list = []
+# for number in numbers:
+#     if number not in unique_list:
+#         unique_list.append(number)
+# print(unique_list)
 
 
 
+values = (5, 5,3,98,33)
+coordinates = (3, 5, 9)
+x, y,z =     coordinates      #unpacking
+print(z)
 
