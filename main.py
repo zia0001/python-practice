@@ -1,4 +1,5 @@
 # import math
+import numpy as np
 #
 #
 # full_patient_name = 'John Smith'
@@ -235,7 +236,7 @@
 #     if number > maximum:
 #         maximum = number
 # print(f"{maximum} is the largest number")
-
+from os.path import split
 
 # numbers = [45, 664, 2 ,4, 6,554]
 #
@@ -247,11 +248,21 @@
 # print(f"{minimum} is the smallest number")
 
 
+# matrix = [
+#     [7, 9, 4],
+#     [9, 9, 4],
+#     [4, 2, 9]
+# ]
+#
+# print
+
 matrix = [
-    [7, 9, 4],
-    [9, 9, 4],
-    [4, 2, 9]
+     [7, 9, 4],
+     [9, 9, 4],
+     [4, 2, 9]
 ]
 
-print(matrix[0][2])
+for row in matrix:
+    for value in row:
+        print(value)
 
