@@ -1,4 +1,6 @@
 # import math
+from doctest import OutputChecker
+
 import numpy as np
 #
 #
@@ -308,11 +310,25 @@ from os.path import split
 # x, y,z =     coordinates      #unpacking
 # print(z)
 
+# phone_number =input('phone: ')
+# key_in_phone = phone_number.split()
+# keys_in_words = 'One Two Three'
+# for key_in_phone in phone_number:
+#     (keys_in_words.split())
+# print(keys_in_words.split())
+
 phone_number =input('phone: ')
-key_in_phone = phone_number.split()
-keys_in_words = 'One Two Three'
-for key_in_phone in phone_number:
-    (keys_in_words.split())
-print(keys_in_words.split())
+
+keys_in_words_mapping ={
+    "1": 'One',
+    "2": 'Two',
+    "3": 'Three',
+    "4": 'Four'
+
+}
+output_message = ' '
+for key in phone_number:
+    output_message += keys_in_words_mapping.get(key, 'unknown' ) + ' '
+print(output_message)
 
 
