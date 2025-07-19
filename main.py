@@ -350,14 +350,44 @@ from os.path import split
 # emojis_mapping(user_message)
 
 
-try:
-    print("This program divides two numbers")
-    first_number = int(input("Enter first number: "))
-    Second_number = int(input("Enter second number: "))
-    result = first_number / Second_number
-    print(f"result is {result}")
-except ZeroDivisionError:
-    print("Cannot be divide by zero")
+# try:
+#     print("This program divides two numbers")
+#     first_number = int(input("Enter first number: "))
+#     Second_number = int(input("Enter second number: "))
+#     result = first_number / Second_number
+#     print(f"result is {result}")
+# except ZeroDivisionError:
+#     print("Cannot be divide by zero")
+
+
+class Animals:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+    def sleep(self):
+        pass
+    def cow(self, name):
+        self.name = name
+        print(f"i ma {name}. i eat grass")
+    def cat(self, name):
+        self.name = name
+        print(f"i am {name}  and i like love cuddling")
+
+a1 =Animals('Cowy', 'herbivorous')
+a2 = Animals('catty', 'pet')
+print(f"Name is {a1.name} and specie is {a1.species}")
+print(f"Name is {a2.name} and specie is {a2.species}")
+
+print(a1.cow(a1.name))
+
+
+class Birds(Animals):
+    def parror(self):
+        print("I am parrot and i can fly")
+b1 = Birds()
+b1.sleep()
+
+
 
 
 
