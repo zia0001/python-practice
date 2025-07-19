@@ -303,8 +303,16 @@ from os.path import split
 
 
 
-values = (5, 5,3,98,33)
-coordinates = (3, 5, 9)
-x, y,z =     coordinates      #unpacking
-print(z)
+# values = (5, 5,3,98,33)
+# coordinates = (3, 5, 9)
+# x, y,z =     coordinates      #unpacking
+# print(z)
+
+phone_number =input('phone: ')
+key_in_phone = phone_number.split()
+keys_in_words = 'One Two Three'
+for key_in_phone in phone_number:
+    (keys_in_words.split())
+print(keys_in_words.split())
+
 
