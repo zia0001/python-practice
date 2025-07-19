@@ -220,3 +220,18 @@ for x in numbers:
     print(output)
 
 
+
+names = ['Ali', 'khalid', 'sami', 'samuel']
+
+names[1] = 'waleed'
+
+print(names)
+
+
+numbers = [45, 7, 8, 23, 55]
+maximum = numbers[0]
+
+for number in numbers:
+    if number > maximum:
+        maximum = number
+print(f"{maximum} is the largest number")
