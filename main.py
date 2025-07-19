@@ -333,21 +333,32 @@ from os.path import split
 
 
 
-def emojis_mapping(message):
-    words_in_message = message.split()
+# def emojis_mapping(message):
+#     words_in_message = message.split()
+#
+#     emojis = {
+#         ":)": '😀',
+#         ":(": '😔'
+#     }
+#     output = ''
+#     for word in words_in_message:
+#        output +=  emojis.get(word, word) + ' '
+#     print(output)
+#
+#
+# user_message = input("> ")
+# emojis_mapping(user_message)
 
-    emojis = {
-        ":)": '😀',
-        ":(": '😔'
-    }
-    output = ''
-    for word in words_in_message:
-       output +=  emojis.get(word, word) + ' '
-    print(output)
 
+try:
+    print("This program divides two numbers")
+    first_number = int(input("Enter first number: "))
+    Second_number = int(input("Enter second number: "))
+    result = first_number / Second_number
+    print(f"result is {result}")
+except ZeroDivisionError:
+    print("Cannot be divide by zero")
 
-user_message = input("> ")
-emojis_mapping(user_message)
 
 
 
