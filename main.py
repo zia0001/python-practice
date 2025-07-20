@@ -445,18 +445,33 @@ from os.path import split
 #         case _:
 #             print("Invalid option")
 
-class Person:
-    def __init__(self, name):
-        self.name = name
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def talk(self):
+#         print(f"{self.name} can talk")
+#         pass
+#
+# p1 = Person('zia')
+# p1.talk()
+# p2 =Person("Ahmad")
+# p2.talk()
 
-    def talk(self):
-        print(f"{self.name} can talk")
-        pass
 
-p1 = Person('zia')
-p1.talk()
-p2 =Person("Ahmad")
-p2.talk()
+#--------------- File Input/Output
+
+f = open('demo_file.txt', 'r')   # opens file in read mode
+#f_data = f.read()               # to read file
+line = f.readline(6)             # read character in a single line
+lines = f.readlines()
+print(lines[2])
+#print(f_data)
+print(line)
+
+f = open('demo_file.txt', 'w')
+
+
 
 
 
