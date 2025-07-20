@@ -1,0 +1,7 @@
+............my library..............
+python
+mathematics
+physics
+c++
+machine learning
+ai
