@@ -1,6 +1,8 @@
 # import math
+import fileinput
 from doctest import OutputChecker
 from os import remove
+from pickle import APPEND
 
 import numpy as np
 #
@@ -461,18 +463,21 @@ from os.path import split
 
 #--------------- File Input/Output
 
-f = open('demo_file.txt', 'r')   # opens file in read mode
-#f_data = f.read()               # to read file
-line = f.readline(6)             # read character in a single line
-lines = f.readlines()
-print(lines[2])
-#print(f_data)
-print(line)
+#f_r = open('demo_file.txt', 'r')   # opens file in read mode
+# #f_data = f.read()               # to read file
+# line = f.readline(6)             # read character in a single line
+# lines = f.readlines(3)
+# print(lines[2])
+# #print(f_data)
+# print(line)
 
-f = open('demo_file.txt', 'w')
+f_w = open('demo_file.txt', 'a+')      # a+ will move pointer to the end that's why will not print anything
+f_w.seek(0)  # move the file pointer to the beginning
+books = f_w.read()
+#f_w.write('\n computer systems')
+print(books)
 
-
-
+f_w.close()
 
 
 
