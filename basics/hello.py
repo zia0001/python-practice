@@ -5,3 +5,5 @@ def poor_developer(n):
   print(n)
 
 poor_developer("poor people") 
+
+poor_dev = 'zia'
