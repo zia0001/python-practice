@@ -471,13 +471,13 @@ from os.path import split
 # #print(f_data)
 # print(line)
 
-f_w = open('demo_file.txt', 'a+')      # a+ will move pointer to the end that's why will not print anything
-f_w.seek(0)  # move the file pointer to the beginning
-books = f_w.read()
-#f_w.write('\n computer systems')
-print(books)
-
-f_w.close()
+# f_w = open('demo_file.txt', 'a+')      # a+ will move pointer to the end that's why will not print anything
+# f_w.seek(0)  # move the file pointer to the beginning
+# books = f_w.read()
+# #f_w.write('\n computer systems')
+# print(books)
+#
+# f_w.close()
 
 
 

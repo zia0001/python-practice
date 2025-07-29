@@ -1,7 +1,8 @@
-............my library..............
+.....LIBRARY MANAGEMENT SYSTEM.....
 python
-mathematics
-physics
-c++
 machine learning
-ai
+data science
+history
+economics
+computer systems
+biology
