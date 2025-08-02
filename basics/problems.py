@@ -182,5 +182,18 @@ def password_checker(password):
     except Exception as error:
       print(error)
 
-user_password = input("Enter password: ")
-password_checker(user_password)
+# user_password = input("Enter password: ")
+# password_checker(user_password)
+
+
+#----------Leap Year checker----------------
+year = int(input("Enter year: "))    
+
+def leap_year(year):
+    if (year % 4 == 0 and year % 100  != 0) or (year % 400 == 0) :
+      print(f"{year} is a leap year")
+    else:
+      print(f"{year} is not a leap year") 
+
+
+leap_year(year)
