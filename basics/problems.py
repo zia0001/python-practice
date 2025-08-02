@@ -162,3 +162,21 @@ if extra_shot:
 print(f"{customer_name} ordered {order}")
 
 
+#-----------------password strength checker-------
+try:
+  password = input("Enter password:")
+  password_char = ''
+
+  if len(password) < 6:
+    password_char = len(password)
+    print(f"{password} has {password_char} charactes. Password must have more the 6 chars")
+  elif len(password) >= 6 and len(password) <= 10:
+    password_char = len(password)
+    print(f"{password} has {password_char} characters. Password is medium")
+
+  elif len(password) >= 11 and len(password) <= 50:
+    password_char = len(password)
+    print(f"{password} has {password_char} characters. Password is stronge")
+
+except Exception as error:
+  print(error)
