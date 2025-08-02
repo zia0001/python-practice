@@ -127,4 +127,22 @@ print(activity)
 #------------------Transportation mode selection-----------
 
 
+try:
+  while True:
+      distance = int(input('Enter distance: '))
+      transport_mode = ''
 
+      if distance < 0 :
+        print("Distance must be positive")
+        continue
+      if distance < 3:
+        transport_mode = 'Walk'
+      elif distance >= 3 and distance <= 15:
+        transport_mode = 'Bike'
+      else:
+        transport_mode = 'Car'
+      print(transport_mode)
+      break
+
+except Exception as error:
+  print(error)
