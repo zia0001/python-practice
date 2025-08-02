@@ -143,6 +143,22 @@ try:
         transport_mode = 'Car'
       print(transport_mode)
       break
+    else:
+        print("Please enter yes or no")
+   
+    
+   
+if order_size in ['small']:
+  order = 'small'
+elif order_size in ['medium', 'med']:
+  order = 'medium'
+elif order_size in ['large', 'lg']:
+  order = 'large'
+else:
+  order = 'size not recognized'
 
-except Exception as error:
-  print(error)
+if extra_shot:
+   order = order + " with extra shot"
+print(f"{customer_name} ordered {order} ")
+
+
