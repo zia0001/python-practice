@@ -158,7 +158,7 @@ else:
   order = 'size not recognized'
 
 if extra_shot:
-   order = order + " with extra shot"
-print(f"{customer_name} ordered {order} ")
+   order = order + " coffee with extra shot"
+print(f"{customer_name} ordered {order}")
 
 
