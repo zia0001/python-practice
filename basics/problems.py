@@ -193,7 +193,27 @@ def leap_year(year):
     if (year % 4 == 0 and year % 100  != 0) or (year % 400 == 0) :
       print(f"{year} is a leap year")
     else:
-      print(f"{year} is not a leap year") 
+       print("Enter only letters")
 
+while True:
+    try:
+       pet_age = int(input("Enter pet age: "))
+       if pet_age <= 0: 
+          print("Age must be greater than 0.")
+          continue
+    except Exception as error:
+       print(error)
+       continue
+    break
+food = ''
+if pet_age <= 0:
+  print("Age must be greater than 0.")
 
-leap_year(year)
+if pet_specie =='dog' and pet_age < 2:
+  food = 'Puppy food'
+elif pet_specie == 'cat' and pet_age > 5:
+  food = 'Senior cat food'
+else:
+   food = ' Regular pet food'
+
+print(food)
