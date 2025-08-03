@@ -86,20 +86,36 @@ print(f"{repeated_char} is/are repeated character(s)")
 input_string = input("Enter anything: ")
 string_list = list(input_string)
 
-unique_char = []
-repeated_char = []
-for s in string_list:
-  if s not in unique_char:
-    unique_char.append(s)
-  else:
-    repeated_char.append(s)
+# unique_char = []
+# repeated_char = []
+# for s in string_list:
+#   if s not in unique_char:
+#     unique_char.append(s)
+#   else:
+#     repeated_char.append(s)
 
-for n in string_list:
-  if n not in repeated_char:
-    print(f"{n} is first Non repeated character")
+# for n in string_list:
+#   if n not in repeated_char:
+#     print(f"{n} is first Non repeated character")
 
 
 
+#-------Factorial calculator-------------
+
+result =1
+number = int(input("Enter a numbere: "))
+if number < 0:
+   print("factorial not defined for negative numbers")
+elif number == 0:
+   print(f"factorial = {1}")
+else:
+    while number >= 1:
+      result = result * number
+      number -= 1
+    print(result)
+      
+      
+    
 
 
   
