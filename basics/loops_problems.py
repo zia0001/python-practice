@@ -42,3 +42,12 @@ sum_of_even = 0
 for number in even_numbers:
   sum_of_even += number
 print(f"sum of even numbers = {sum_of_even}")
+
+
+
+#-------------multiplication printer table-----------------
+
+number = int(input("Enter the number: "))
+
+for n in range(1, 11):
+  print(f"{number} X {n} = {n * number}")
