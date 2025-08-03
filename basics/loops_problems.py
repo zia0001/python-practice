@@ -78,7 +78,11 @@ for s in string_list:
     unique_char.append(s)
   else:
     repeated_char.append(s)
-print(f"{repeated_char} is/are repeated character(s)")
+
+for n in string_list:
+  if n not in repeated_char:
+    print(f"{n} is first Non repeated character")
+
 
 
 
