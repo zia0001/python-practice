@@ -49,5 +49,19 @@ print(f"sum of even numbers = {sum_of_even}")
 
 number = int(input("Enter the number: "))
 
-for n in range(1, 11):
-  print(f"{number} X {n} = {n * number}")
+# for n in range(1, 11):
+#   print(f"{number} X {n} = {n * number}")
+
+
+
+#-----------Reverse a sring-----------
+
+
+original_string = input("Enter the string: ")
+reversed_string = original_string[::-1]
+
+
+print(reversed_string)
+
+
+  
