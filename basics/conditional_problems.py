@@ -143,6 +143,30 @@ try:
         transport_mode = 'Car'
       print(transport_mode)
       break
+
+except Exception as error:
+  print(error)
+
+
+
+#-------------Coffee Customization-----------
+while True:
+    customer_name = input("Enter your name: ").lower()
+    if customer_name.isalpha():
+      break
+    else:
+       print("Please enter only letters")
+while True:
+    order_size =input("Enter coffee size: ").lower()
+    if order_size.isalpha():
+      break
+    else:
+      print("Please enter only letters")
+while True:
+    extra_input_shot = input("Want extra shot? (yes/no): ").lower()
+    if extra_input_shot in ['yes', 'no']:
+      extra_shot = (extra_input_shot == 'yes')
+      break
     else:
         print("Please enter yes or no")
    
@@ -182,8 +206,8 @@ def password_checker(password):
     except Exception as error:
       print(error)
 
-# user_password = input("Enter password: ")
-# password_checker(user_password)
+user_password = input("Enter password: ")
+password_checker(user_password)
 
 
 #----------Leap Year checker----------------
@@ -192,6 +216,19 @@ year = int(input("Enter year: "))
 def leap_year(year):
     if (year % 4 == 0 and year % 100  != 0) or (year % 400 == 0) :
       print(f"{year} is a leap year")
+    else:
+      print(f"{year} is not a leap year") 
+
+
+leap_year(year)
+
+
+
+#--------pet food recommendation-------
+while True:
+    pet_specie = input("Enter pet specice type: ").lower()
+    if pet_specie.isalpha():
+      break
     else:
        print("Enter only letters")
 
