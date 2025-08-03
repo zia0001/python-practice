@@ -25,3 +25,20 @@ sum_of_even = 0
 for number in even_numbers:
   sum_of_even += number
 print(f"sum of even numbers = {sum_of_even}")
+
+
+input_numbers = input("Enter numbers: ")
+list_of_strings = input_numbers.split()
+list_of_integers = list(map(int, list_of_strings))
+even_numbers = []
+
+for number in list_of_integers:
+  if number % 2 == 0:
+    even_numbers.append(number)
+print(even_numbers)
+
+sum_of_even = 0
+
+for number in even_numbers:
+  sum_of_even += number
+print(f"sum of even numbers = {sum_of_even}")
