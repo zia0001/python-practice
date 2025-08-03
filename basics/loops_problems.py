@@ -78,25 +78,10 @@ for s in string_list:
     unique_char.append(s)
   else:
     repeated_char.append(s)
-print(f"{repeated_char} is/are repeated character(s)")
 
-
-#----------Find first Non repeated character in string------------
-
-input_string = input("Enter anything: ")
-string_list = list(input_string)
-
-# unique_char = []
-# repeated_char = []
-# for s in string_list:
-#   if s not in unique_char:
-#     unique_char.append(s)
-#   else:
-#     repeated_char.append(s)
-
-# for n in string_list:
-#   if n not in repeated_char:
-#     print(f"{n} is first Non repeated character")
+for n in string_list:
+  if n not in repeated_char:
+    print(f"{n} is first Non repeated character")
 
 
 
