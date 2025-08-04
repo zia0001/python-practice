@@ -131,7 +131,7 @@ while True:
 
 
 def prime_num(number):
-      
+      try:
         if number > 1:
           for i in range(2, number):
             if number % i == 0:
@@ -140,11 +140,10 @@ def prime_num(number):
           else:
             print(f"{number} is prime")
         else:
-          print(f"{number}Not prime")
+           print("Not a prime number")
+      except Exception :
+        print("Invalid value")
 
-try:
 
-  prime_num(101)
+prime_num(103)
 
-except Exception :
-      print("Invalid value")
