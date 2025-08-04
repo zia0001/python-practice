@@ -115,7 +115,16 @@ else:
     print(result)
       
       
-    
+#--------------Valid input----------------
 
+
+
+while True:
+
+    number = int(input("enter a number: "))
+    if number >= 1 and number <= 10:
+      break
+    else:
+      continue
 
   
