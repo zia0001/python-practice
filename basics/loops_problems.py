@@ -129,17 +129,22 @@ while True:
 
 #--------------Prime Number Checker-------------
 
-try:
-  number = int(input("Enter a number: "))
 
-  if number > 1:
-    for i in range(2, number):
-      if number % i == 0:
-        print("Not prime")
-        break
-    else:
-      print("prime")
-  else:
-    print("Not prime")
+def prime_num(number):
+      
+        if number > 1:
+          for i in range(2, number):
+            if number % i == 0:
+              print(f"{number} is Not prime")
+              break
+          else:
+            print(f"{number} is prime")
+        else:
+          print(f"{number}Not prime")
+
+try:
+
+  prime_num(101)
+
 except Exception :
-  print("Invalid value")
+      print("Invalid value")
