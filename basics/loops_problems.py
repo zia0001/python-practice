@@ -157,10 +157,10 @@ unique_list = []
 input_list = input("Add item to list: ").lower()
 list_items = input_list.split()
 
-# for item in list_items:
-#   if item not in unique_list:
-#     unique_list.append(item)
-# print(unique_list)
+for item in list_items:
+  if item not in unique_list:
+    unique_list.append(item)
+print(unique_list)
 
 
 #--------------Exponential Backoff---------------
