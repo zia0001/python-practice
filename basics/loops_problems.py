@@ -127,4 +127,19 @@ while True:
     else:
       continue
 
-  
+#--------------Prime Number Checker-------------
+
+try:
+  number = int(input("Enter a number: "))
+
+  if number > 1:
+    for i in range(2, number):
+      if number % i == 0:
+        print("Not prime")
+        break
+    else:
+      print("prime")
+  else:
+    print("Not prime")
+except Exception :
+  print("Invalid value")
