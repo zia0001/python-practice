@@ -135,12 +135,12 @@ def prime_num(number):
         if number > 1:
           for i in range(2, number):
             if number % i == 0:
-              print(f"{number} is Not prime")
+              print(False)
               break
           else:
-            print(f"{number} is prime")
+             print(True)
         else:
-           print("Not a prime number")
+           print(False)
       except Exception :
         print("Invalid value")
 
