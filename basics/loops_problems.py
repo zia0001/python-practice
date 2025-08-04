@@ -145,5 +145,20 @@ def prime_num(number):
         print("Invalid value")
 
 
-prime_num(103)
+# prime_num(-29)
+
+
+#------------------------List Uniqueness Checker----------
+
+list_items =[]
+unique_list = []
+
+
+input_list = input("Add item to list: ").lower()
+list_items = input_list.split()
+
+for item in list_items:
+  if item not in unique_list:
+    unique_list.append(item)
+print(unique_list)
 

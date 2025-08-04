@@ -230,3 +230,25 @@ boy
 output: 'boy'
 trans
 'output: trans'
+
+
+-----------Exponential Backoff---------
+
+Exponential Backoff is a retry strategy used when a request (like to a server or API) fails.
+Instead of retrying immediately or at a fixed delay, it waits longer and longer between retries.
+
+🔍 How it works
+First retry: wait a short time (e.g., 1 second)
+
+Second retry: wait more (e.g., 2 seconds)
+
+Third retry: wait even more (e.g., 4 seconds)
+
+Delay grows exponentially (1, 2, 4, 8, 16 … seconds) until success or max retries.
+
+🛠 Why use it?
+Prevents overloading the server when there’s an error or high traffic.
+
+Gives the system time to recover.
+
+Common in APIs, network requests, cloud services, etc.
