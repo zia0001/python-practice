@@ -18,4 +18,13 @@ square(4)
 def sum(num1, num2):
    return num1 + num2
 
-print(sum(2,3))
+# print(sum(2,3))
+
+
+#-------------------multiply two number and also accept string---------
+
+def multiply(value1, value2):
+  return value1 * value2
+
+
+print(multiply('h',7))
