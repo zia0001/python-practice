@@ -50,4 +50,12 @@ print(result['area'])
 def greet(user ='zia'):
   return user
 
-print(greet())
+# print(greet())
+
+
+#-----------lambda function--------------
+
+cube = lambda x: x**3
+print(cube(3))
+
+
