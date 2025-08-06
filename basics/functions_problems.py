@@ -27,4 +27,20 @@ def multiply(value1, value2):
   return value1 * value2
 
 
-print(multiply('h',7))
+# print(multiply('h',7))
+
+
+#----------function returning multiple values area and circumference of a circle-----------
+import math
+
+def area_stats(radius):
+  area = math.pi * radius **2
+  circumference = 2 * math.pi * radius
+
+  return {
+    'area':round(area, 3),
+    'circumference': round(circumference, 3)}
+
+result = area_stats(7)
+print(result['area'])
+
