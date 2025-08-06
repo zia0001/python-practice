@@ -59,3 +59,12 @@ cube = lambda x: x**3
 print(cube(3))
 
 
+
+#---------*args a variable(multiple)args function accept multiple arguments----------
+
+def add(*args):
+  return sum(args)
+
+
+# print(add(1,2,3))
+print(add(3,4,5,6,7,7))
