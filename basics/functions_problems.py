@@ -44,3 +44,10 @@ def area_stats(radius):
 result = area_stats(7)
 print(result['area'])
 
+
+#---------------------------function greet user if user not found greet with default name----------
+
+def greet(user ='zia'):
+  return user
+
+print(greet())
