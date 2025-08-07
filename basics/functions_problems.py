@@ -67,4 +67,15 @@ def add(*args):
 
 
 # print(add(1,2,3))
-print(add(3,4,5,6,7,7))
+# print(add(3,4,5,6,7,7))
+
+
+
+#-------------------**kwargs-------
+
+def result_card(**kwargs):
+  for key, value in kwargs.items():
+    print(f"{key} : {value}")
+
+
+result_card(name = 'zia', marks = 89 )
