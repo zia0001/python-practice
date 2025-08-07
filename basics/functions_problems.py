@@ -83,14 +83,14 @@ def result_card(**kwargs):
 
 #---------Even numbers to the specific limit----
 
-# def Even(limit):
-#   even_numbers = []
-#   for num in range(1, limit + 1):
-#     if num % 2 == 0:
-#       even_numbers.append(num)
-#     else:
-#       pass
-#   print(even_numbers)
+def Even(limit):
+  even_numbers = []
+  for num in range(1, limit + 1):
+    if num % 2 == 0:
+      even_numbers.append(num)
+    else:
+      pass
+  print(even_numbers)
 
 # Even(12)
 
