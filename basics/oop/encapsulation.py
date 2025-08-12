@@ -1,10 +1,10 @@
 class Car:
 
   def __init__(self, brand, model):
-    self.__brand = brand
-    self.__model = model
+    self.__brand = brand      #priate attribute
+    self.__model = model      #private attribute
 
-  def get_brand(self):
+  def get_brand(self):        #getter method: access only through getter method
       return self.__brand  
   
   def get_model(self):
