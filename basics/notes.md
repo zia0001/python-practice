@@ -252,3 +252,213 @@ Prevents overloading the server when there’s an error or high traffic.
 Gives the system time to recover.
 
 Common in APIs, network requests, cloud services, etc.
+
+
+#--------------iteration_tools---------------
+
+>>> mylist = [1,2,3,4,5]
+>>> I = iter(mylist)
+>>> I
+<list_iterator object at 0x0000024636D693F0>    
+>>> I.__next__()
+1
+>>> I.__next__()
+2
+>>> I.__next__()
+3
+>>> I.__next__()
+4
+>>> I.__next__()
+5
+>>> I.__next__()
+Traceback (most recent call last):
+  File "<python-input-8>", line 1, in <module>  
+    I.__next__()
+StopIteration
+
+
+
+#---------------------------function greet user if user not found greet with default name----------
+
+# def greet(user ='zia'):
+#   return user
+
+# print(greet())
+
+
+#-----------lambda function--------------
+
+cube = lambda x: x**3
+print(cube(3))
+
+#---------**kwargs------
+
+The special syntax **kwargs in function definitions is used to pass a variable length argument list. We use the name kwargs with the double star **.
+
+A keyword argument is where you provide a name to the variable as you pass it into the function.
+It collects all the additional keyword arguments passed to the function and stores them in a dictionary.
+
+  Example:
+          def result_card(**kwargs):
+              for key, value in kwargs.items():
+              print(f"{key} : {value}")
+
+
+result_card(name = 'zia', marks = 89 )
+
+output: name : zia
+marks : 89
+
+
+#--------------Recursion----------
+        def factorial(num):
+          if num == 0 or num == 1:
+            return 1
+          else:
+            return num * factorial((num - 1))
+
+        num = 5
+        print(f"factorial of {num} is {factorial(num)}")
+
+        Step-by-step breakdown:
+                  factorial(5)
+
+                → 5 * factorial(4)
+                    → 4 * factorial(3)
+                        → 3 * factorial(2)
+                            → 2 * factorial(1)
+                                → 1  → Base case reached
+
+        Now we return step by step
+                factorial(1) → returns 1
+                factorial(2) → 2 * 1 = 2
+                factorial(3) → 3 * 2 = 6
+                factorial(4) → 4 * 6 = 24
+                factorial(5) → 5 * 24 = 120
+
+
+
+
+#---------ENCLOSURE---------
+
+What is Enclosure in Python?
+An enclosure happens when a function is defined inside another function, and the inner function remembers the variables from the outer function even after the outer function has finished running.
+
+This is part of Python’s LEGB rule:
+
+Local
+
+Enclosing
+
+Global
+
+Built-in
+
+✅ Example of Enclosure
+def outer():
+    msg = "Hello from outer!"
+
+    def inner():
+        print(msg)  # ← accesses 'msg' from outer scope (enclosure)
+
+    return inner
+Now when you call:
+
+greet = outer()
+greet()  # prints: Hello from outer!
+Even though outer() has finished running, inner() still remembers the value of msg — this is because of enclosure.
+
+the reason we store the outer() function's return value in a variable (like greet) is:
+
+ So we can keep and use the inner() function later, even after outer() has finished running.
+
+
+#--------CLASS AND OBJECT WITH CONSTRUCTOR----------
+
+
+class Car:
+
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+    
+
+c1= Car('pijaro', 2021)
+print( c1.brand,':' ,c1.model)
+
+
+
+#--------------------- ENCAPSULATION------------
+
+keeping things private means only accessabale inside class...
+
+
+getter:
+A getter is simply a method that returns the value of a (usually private) attribute.
+    EXAMPLE:
+    def get_brand(self):
+    return self.__brand    #__ makes attribute private
+
+
+
+#----------POLYMORPHISM-----------
+
+Polymorphism in simple terms
+"One interface, multiple forms."
+Same method name, but it behaves differently depending on which object is calling it.
+    EXAMPLE:
+  class Car:
+    def fuel_type(self):
+        return "Petrol or Diesel or CNG"
+
+  class ElectricCar(Car):
+    def fuel_type(self):
+        return "Electric charge"
+
+#----------STATIC METHOD---------
+
+ a static method is a method that belongs to a class but does not operate on an instance of that class or the class itself. Unlike instance methods, static methods do not receive an implicit self (instance) or cls (class) argument. 
+    EXAMPLE:
+
+          class MyClass:
+            @staticmethod
+            def my_static_method(arg1, arg2):
+                # This method does not access instance or class attributes
+                return arg1 + arg2
+
+
+#------------------DECORATORS---------
+
+def func_debug(func):
+  def wrapper(*args, **kwargs):
+    args_values = ', '.join(str(arg)for arg in args)
+    print(f"Calling: {func.__name__}() with args {args_values}")
+    return func(*args, **kwargs)
+  return wrapper
+
+
+@func_debug
+def greet(name, greeting = 'Hello'):
+  print(f"{greeting}, {name}")
+
+greet('zia', "welcome")
+
+:..HERE
+    func_debug(greet) returns wrapper
+
+    wrapper remembers func (the original greet) because of closure
+
+    greet now points to wrapper
+
+:-  Key connection:
+
+  Both closures and decorators depend on an inner function remembering variables from the outer function.
+
+  The main difference:
+
+  A closure is about returning a function that keeps state.
+
+  A decorator is about replacing a function with a wrapped version that adds behavior.
+
+
+
